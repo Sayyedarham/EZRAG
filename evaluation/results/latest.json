@@ -1,0 +1,1047 @@
+{
+  "benchmark_id": "ezrag-synthetic-product-support-v1",
+  "benchmark_description": "Small synthetic fixture for validating benchmark workflow and exposing retrieval tradeoffs. Not representative user data and not evidence of product quality.",
+  "run_timestamp_utc": "2026-10-12T18:12:33.293077+00:00",
+  "configuration": {
+    "methods": [
+      "BM25"
+    ],
+    "top_ks": [
+      1,
+      3,
+      5
+    ],
+    "rrf_ks": [
+      60
+    ],
+    "embedding_model": null,
+    "answer_model": null,
+    "chunking": "fixed curated chunks; no chunking ablation in this fixture"
+  },
+  "interpretation": "Synthetic benchmark plumbing only. Not representative user data and not a product quality claim.",
+  "summaries": [
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "slice": "exact_identifier",
+      "n_queries": 4,
+      "n_answerable": 4,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.2743500008364208,
+      "p50_latency_ms": 0.22164999973028898,
+      "p95_latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "slice": "multi_evidence",
+      "n_queries": 2,
+      "n_answerable": 2,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.21559999731834978,
+      "p50_latency_ms": 0.21559999731834978,
+      "p95_latency_ms": 0.22529999841935933,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "slice": "overall",
+      "n_queries": 12,
+      "n_answerable": 11,
+      "recall": 0.8181818181818182,
+      "mrr": 0.8181818181818182,
+      "ndcg": 0.8181818181818182,
+      "mean_latency_ms": 0.2386083336508212,
+      "p50_latency_ms": 0.22370000078808516,
+      "p95_latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "slice": "paraphrase",
+      "n_queries": 4,
+      "n_answerable": 4,
+      "recall": 0.5,
+      "mrr": 0.5,
+      "ndcg": 0.5,
+      "mean_latency_ms": 0.2247500015073456,
+      "p50_latency_ms": 0.2271999983349815,
+      "p95_latency_ms": 0.2418000076431781,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "slice": "stale_conflict",
+      "n_queries": 1,
+      "n_answerable": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.21359999664127827,
+      "p50_latency_ms": 0.21359999664127827,
+      "p95_latency_ms": 0.21359999664127827,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "slice": "unanswerable",
+      "n_queries": 1,
+      "n_answerable": 0,
+      "recall": null,
+      "mrr": null,
+      "ndcg": null,
+      "mean_latency_ms": 0.222100003156811,
+      "p50_latency_ms": 0.222100003156811,
+      "p95_latency_ms": 0.222100003156811,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "slice": "exact_identifier",
+      "n_queries": 4,
+      "n_answerable": 4,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.2743500008364208,
+      "p50_latency_ms": 0.22164999973028898,
+      "p95_latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "slice": "multi_evidence",
+      "n_queries": 2,
+      "n_answerable": 2,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.21559999731834978,
+      "p50_latency_ms": 0.21559999731834978,
+      "p95_latency_ms": 0.22529999841935933,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "slice": "overall",
+      "n_queries": 12,
+      "n_answerable": 11,
+      "recall": 0.9090909090909091,
+      "mrr": 0.8636363636363636,
+      "ndcg": 0.8755390685064962,
+      "mean_latency_ms": 0.2386083336508212,
+      "p50_latency_ms": 0.22370000078808516,
+      "p95_latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "slice": "paraphrase",
+      "n_queries": 4,
+      "n_answerable": 4,
+      "recall": 0.75,
+      "mrr": 0.625,
+      "ndcg": 0.6577324383928644,
+      "mean_latency_ms": 0.2247500015073456,
+      "p50_latency_ms": 0.2271999983349815,
+      "p95_latency_ms": 0.2418000076431781,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "slice": "stale_conflict",
+      "n_queries": 1,
+      "n_answerable": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.21359999664127827,
+      "p50_latency_ms": 0.21359999664127827,
+      "p95_latency_ms": 0.21359999664127827,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "slice": "unanswerable",
+      "n_queries": 1,
+      "n_answerable": 0,
+      "recall": null,
+      "mrr": null,
+      "ndcg": null,
+      "mean_latency_ms": 0.222100003156811,
+      "p50_latency_ms": 0.222100003156811,
+      "p95_latency_ms": 0.222100003156811,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "slice": "exact_identifier",
+      "n_queries": 4,
+      "n_answerable": 4,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.2743500008364208,
+      "p50_latency_ms": 0.22164999973028898,
+      "p95_latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "slice": "multi_evidence",
+      "n_queries": 2,
+      "n_answerable": 2,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.21559999731834978,
+      "p50_latency_ms": 0.21559999731834978,
+      "p95_latency_ms": 0.22529999841935933,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "slice": "overall",
+      "n_queries": 12,
+      "n_answerable": 11,
+      "recall": 1.0,
+      "mrr": 0.8863636363636364,
+      "ndcg": 0.9146914828768046,
+      "mean_latency_ms": 0.2386083336508212,
+      "p50_latency_ms": 0.22370000078808516,
+      "p95_latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "slice": "paraphrase",
+      "n_queries": 4,
+      "n_answerable": 4,
+      "recall": 1.0,
+      "mrr": 0.6875,
+      "ndcg": 0.7654015779112127,
+      "mean_latency_ms": 0.2247500015073456,
+      "p50_latency_ms": 0.2271999983349815,
+      "p95_latency_ms": 0.2418000076431781,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "slice": "stale_conflict",
+      "n_queries": 1,
+      "n_answerable": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "mean_latency_ms": 0.21359999664127827,
+      "p50_latency_ms": 0.21359999664127827,
+      "p95_latency_ms": 0.21359999664127827,
+      "embedding_tokens": 0
+    },
+    {
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "slice": "unanswerable",
+      "n_queries": 1,
+      "n_answerable": 0,
+      "recall": null,
+      "mrr": null,
+      "ndcg": null,
+      "mean_latency_ms": 0.222100003156811,
+      "p50_latency_ms": 0.222100003156811,
+      "p95_latency_ms": 0.222100003156811,
+      "embedding_tokens": 0
+    }
+  ],
+  "paired_deltas_vs_bm25": [],
+  "per_query": [
+    {
+      "query_id": "q01",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "account-01"
+      ],
+      "relevant_chunk_ids": [
+        "account-01"
+      ]
+    },
+    {
+      "query_id": "q01",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "account-01",
+        "release-02",
+        "release-01"
+      ],
+      "relevant_chunk_ids": [
+        "account-01"
+      ]
+    },
+    {
+      "query_id": "q01",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.44099999649915844,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "account-01",
+        "release-02",
+        "release-01",
+        "account-02",
+        "security-01"
+      ],
+      "relevant_chunk_ids": [
+        "account-01"
+      ]
+    },
+    {
+      "query_id": "q02",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22780000290367752,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "account-02"
+      ],
+      "relevant_chunk_ids": [
+        "account-02"
+      ]
+    },
+    {
+      "query_id": "q02",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22780000290367752,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "account-02",
+        "service-02",
+        "release-01"
+      ],
+      "relevant_chunk_ids": [
+        "account-02"
+      ]
+    },
+    {
+      "query_id": "q02",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22780000290367752,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "account-02",
+        "service-02",
+        "release-01",
+        "security-02",
+        "service-01"
+      ],
+      "relevant_chunk_ids": [
+        "account-02"
+      ]
+    },
+    {
+      "query_id": "q03",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22729999909643084,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-01"
+      ],
+      "relevant_chunk_ids": [
+        "returns-01"
+      ]
+    },
+    {
+      "query_id": "q03",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22729999909643084,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-01",
+        "release-01",
+        "service-02"
+      ],
+      "relevant_chunk_ids": [
+        "returns-01"
+      ]
+    },
+    {
+      "query_id": "q03",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22729999909643084,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-01",
+        "release-01",
+        "service-02",
+        "account-02",
+        "service-01"
+      ],
+      "relevant_chunk_ids": [
+        "returns-01"
+      ]
+    },
+    {
+      "query_id": "q04",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.2418000076431781,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-02"
+      ],
+      "relevant_chunk_ids": [
+        "returns-02"
+      ]
+    },
+    {
+      "query_id": "q04",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.2418000076431781,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-02",
+        "security-01",
+        "billing-01"
+      ],
+      "relevant_chunk_ids": [
+        "returns-02"
+      ]
+    },
+    {
+      "query_id": "q04",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.2418000076431781,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-02",
+        "security-01",
+        "billing-01",
+        "account-01",
+        "release-01"
+      ],
+      "relevant_chunk_ids": [
+        "returns-02"
+      ]
+    },
+    {
+      "query_id": "q05",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.21600000036414713,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "service-01"
+      ],
+      "relevant_chunk_ids": [
+        "service-01"
+      ]
+    },
+    {
+      "query_id": "q05",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.21600000036414713,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "service-01",
+        "service-02",
+        "account-02"
+      ],
+      "relevant_chunk_ids": [
+        "service-01"
+      ]
+    },
+    {
+      "query_id": "q05",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.21600000036414713,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "service-01",
+        "service-02",
+        "account-02",
+        "security-02",
+        "release-01"
+      ],
+      "relevant_chunk_ids": [
+        "service-01"
+      ]
+    },
+    {
+      "query_id": "q06",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "latency_ms": 0.22659999376628548,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "service-02"
+      ],
+      "relevant_chunk_ids": [
+        "service-01"
+      ]
+    },
+    {
+      "query_id": "q06",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 0.5,
+      "ndcg": 0.6309297535714575,
+      "latency_ms": 0.22659999376628548,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "service-02",
+        "service-01",
+        "account-02"
+      ],
+      "relevant_chunk_ids": [
+        "service-01"
+      ]
+    },
+    {
+      "query_id": "q06",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 0.5,
+      "ndcg": 0.6309297535714575,
+      "latency_ms": 0.22659999376628548,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "service-02",
+        "service-01",
+        "account-02",
+        "returns-01",
+        "onboarding-01"
+      ],
+      "relevant_chunk_ids": [
+        "service-01"
+      ]
+    },
+    {
+      "query_id": "q07",
+      "slice": "multi_evidence",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.20589999621734023,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-01"
+      ],
+      "relevant_chunk_ids": [
+        "security-01"
+      ]
+    },
+    {
+      "query_id": "q07",
+      "slice": "multi_evidence",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.20589999621734023,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-01",
+        "release-01",
+        "billing-01"
+      ],
+      "relevant_chunk_ids": [
+        "security-01"
+      ]
+    },
+    {
+      "query_id": "q07",
+      "slice": "multi_evidence",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.20589999621734023,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-01",
+        "release-01",
+        "billing-01",
+        "onboarding-01",
+        "security-02"
+      ],
+      "relevant_chunk_ids": [
+        "security-01"
+      ]
+    },
+    {
+      "query_id": "q08",
+      "slice": "multi_evidence",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22529999841935933,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-02"
+      ],
+      "relevant_chunk_ids": [
+        "security-02"
+      ]
+    },
+    {
+      "query_id": "q08",
+      "slice": "multi_evidence",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22529999841935933,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-02",
+        "release-02",
+        "service-01"
+      ],
+      "relevant_chunk_ids": [
+        "security-02"
+      ]
+    },
+    {
+      "query_id": "q08",
+      "slice": "multi_evidence",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.22529999841935933,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-02",
+        "release-02",
+        "service-01",
+        "account-02",
+        "service-02"
+      ],
+      "relevant_chunk_ids": [
+        "security-02"
+      ]
+    },
+    {
+      "query_id": "q09",
+      "slice": "stale_conflict",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.21359999664127827,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "release-01"
+      ],
+      "relevant_chunk_ids": [
+        "release-01"
+      ]
+    },
+    {
+      "query_id": "q09",
+      "slice": "stale_conflict",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.21359999664127827,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "release-01",
+        "release-02",
+        "billing-01"
+      ],
+      "relevant_chunk_ids": [
+        "release-01"
+      ]
+    },
+    {
+      "query_id": "q09",
+      "slice": "stale_conflict",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.21359999664127827,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "release-01",
+        "release-02",
+        "billing-01",
+        "service-02",
+        "account-02"
+      ],
+      "relevant_chunk_ids": [
+        "release-01"
+      ]
+    },
+    {
+      "query_id": "q10",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.2131000073859468,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "billing-01"
+      ],
+      "relevant_chunk_ids": [
+        "billing-01"
+      ]
+    },
+    {
+      "query_id": "q10",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.2131000073859468,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "billing-01",
+        "release-01",
+        "security-01"
+      ],
+      "relevant_chunk_ids": [
+        "billing-01"
+      ]
+    },
+    {
+      "query_id": "q10",
+      "slice": "exact_identifier",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "latency_ms": 0.2131000073859468,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "billing-01",
+        "release-01",
+        "security-01",
+        "onboarding-01",
+        "service-02"
+      ],
+      "relevant_chunk_ids": [
+        "billing-01"
+      ]
+    },
+    {
+      "query_id": "q11",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "latency_ms": 0.20280000171624124,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-02"
+      ],
+      "relevant_chunk_ids": [
+        "onboarding-01"
+      ]
+    },
+    {
+      "query_id": "q11",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "latency_ms": 0.20280000171624124,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-02",
+        "account-01",
+        "returns-01"
+      ],
+      "relevant_chunk_ids": [
+        "onboarding-01"
+      ]
+    },
+    {
+      "query_id": "q11",
+      "slice": "paraphrase",
+      "answerable": true,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": 1.0,
+      "mrr": 0.25,
+      "ndcg": 0.43067655807339306,
+      "latency_ms": 0.20280000171624124,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "returns-02",
+        "account-01",
+        "returns-01",
+        "onboarding-01",
+        "billing-01"
+      ],
+      "relevant_chunk_ids": [
+        "onboarding-01"
+      ]
+    },
+    {
+      "query_id": "q12",
+      "slice": "unanswerable",
+      "answerable": false,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 1,
+      "recall": null,
+      "mrr": null,
+      "ndcg": null,
+      "latency_ms": 0.222100003156811,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-01"
+      ],
+      "relevant_chunk_ids": []
+    },
+    {
+      "query_id": "q12",
+      "slice": "unanswerable",
+      "answerable": false,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 3,
+      "recall": null,
+      "mrr": null,
+      "ndcg": null,
+      "latency_ms": 0.222100003156811,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-01",
+        "account-02",
+        "billing-01"
+      ],
+      "relevant_chunk_ids": []
+    },
+    {
+      "query_id": "q12",
+      "slice": "unanswerable",
+      "answerable": false,
+      "method": "BM25",
+      "rrf_k": null,
+      "top_k": 5,
+      "recall": null,
+      "mrr": null,
+      "ndcg": null,
+      "latency_ms": 0.222100003156811,
+      "embedding_tokens": 0,
+      "retrieved_chunk_ids": [
+        "security-01",
+        "account-02",
+        "billing-01",
+        "release-01",
+        "service-02"
+      ],
+      "relevant_chunk_ids": []
+    }
+  ]
+}

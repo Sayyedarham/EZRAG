@@ -1,0 +1,32 @@
+{
+  "benchmark_id": "ezrag-synthetic-product-support-v1",
+  "description": "Small synthetic fixture for validating benchmark workflow and exposing retrieval tradeoffs. Not representative user data and not evidence of product quality.",
+  "chunks": [
+    {"id":"account-01","source":"Account Help","text":"To reset a forgotten password, select Forgot password on the sign-in page. We send a reset link to the email address registered to the account. The link expires after 30 minutes."},
+    {"id":"account-02","source":"Account Help","text":"If a sign-in code does not arrive, check the device clock, confirm the authenticator app is enrolled, and use a backup code. Support cannot disable multi-factor authentication without identity verification."},
+    {"id":"returns-01","source":"Purchase Policy","text":"Customers may request a refund within 30 calendar days of purchase. Approved refunds return to the original payment method and usually appear within five to seven business days."},
+    {"id":"returns-02","source":"Purchase Policy","text":"Subscription renewals are refundable within 14 days where required by local law. After that period, turn off renewal to avoid future charges; cancellation does not refund the current billing period."},
+    {"id":"service-01","source":"Support Handbook","text":"A Priority 1 incident is a complete production outage affecting multiple customers. The on-call engineer acknowledges a P1 within 15 minutes, opens an incident bridge, and sends customer updates every 30 minutes."},
+    {"id":"service-02","source":"Support Handbook","text":"Priority 2 means a major feature is unavailable but a workaround exists. The response target is four business hours. Normal support requests receive a response within two business days."},
+    {"id":"security-01","source":"Security Overview","text":"Audit logs are retained for 365 days on the Enterprise plan and 30 days on the Standard plan. Workspace administrators can export audit events as CSV from Settings, then Security, then Audit log."},
+    {"id":"security-02","source":"Security Overview","text":"Customer content is encrypted at rest using AES-256 and encrypted in transit using TLS 1.2 or later. Encryption keys are rotated at least annually."},
+    {"id":"release-01","source":"Release Notes - Current","text":"The redesigned dashboard became generally available on 2026-08-14. Workspace owners can enable it from Settings. The legacy dashboard is scheduled for removal on 2027-03-01."},
+    {"id":"release-02","source":"Release Notes - Archive","text":"The redesigned dashboard entered public beta in 2025. At that time, the release team had not announced a general availability date."},
+    {"id":"billing-01","source":"Billing FAQ","text":"Invoices are available from Workspace settings under Billing and invoices. Only workspace owners and billing admins can view or download invoices. Invoices include the billing address and tax details on file."},
+    {"id":"onboarding-01","source":"Getting Started","text":"Invite a teammate by opening Workspace settings, choosing Members, and selecting Invite member. Enter their work email and choose a role. Pending invitations expire after seven days."}
+  ],
+  "queries": [
+    {"id":"q01","slice":"exact_identifier","query":"How long before the password reset link expires?","relevant_chunk_ids":["account-01"],"answerable":true,"reference_answer":"The password reset link expires after 30 minutes."},
+    {"id":"q02","slice":"paraphrase","query":"I am locked out because my second-factor code is missing. What should I try?","relevant_chunk_ids":["account-02"],"answerable":true,"reference_answer":"Check the device clock and authenticator enrollment, then use a backup code. Support requires identity verification to disable MFA."},
+    {"id":"q03","slice":"exact_identifier","query":"What is the refund window for a purchase?","relevant_chunk_ids":["returns-01"],"answerable":true,"reference_answer":"A refund may be requested within 30 calendar days of purchase."},
+    {"id":"q04","slice":"paraphrase","query":"I forgot to stop my plan from renewing. Can I get this billing period refunded?","relevant_chunk_ids":["returns-02"],"answerable":true,"reference_answer":"Renewals are refundable within 14 days where local law requires it; otherwise canceling only prevents future charges and does not refund the current period."},
+    {"id":"q05","slice":"exact_identifier","query":"What is the P1 acknowledgement target and update cadence?","relevant_chunk_ids":["service-01"],"answerable":true,"reference_answer":"A P1 is acknowledged within 15 minutes and customers receive updates every 30 minutes."},
+    {"id":"q06","slice":"paraphrase","query":"How quickly should support answer a major outage impacting several customers?","relevant_chunk_ids":["service-01"],"answerable":true,"reference_answer":"A multi-customer production outage is P1; the acknowledgement target is 15 minutes."},
+    {"id":"q07","slice":"multi_evidence","query":"Compare audit-log retention for Enterprise and Standard plans.","relevant_chunk_ids":["security-01"],"answerable":true,"reference_answer":"Enterprise retains audit logs for 365 days; Standard retains them for 30 days."},
+    {"id":"q08","slice":"multi_evidence","query":"How is customer content protected in storage and in transit?","relevant_chunk_ids":["security-02"],"answerable":true,"reference_answer":"Content is encrypted at rest with AES-256 and in transit with TLS 1.2 or later."},
+    {"id":"q09","slice":"stale_conflict","query":"Is the redesigned dashboard generally available yet?","relevant_chunk_ids":["release-01"],"answerable":true,"reference_answer":"Yes. It became generally available on 2026-08-14."},
+    {"id":"q10","slice":"exact_identifier","query":"Who can download a workspace invoice?","relevant_chunk_ids":["billing-01"],"answerable":true,"reference_answer":"Workspace owners and billing admins can view or download invoices."},
+    {"id":"q11","slice":"paraphrase","query":"Where do I add a colleague to our workspace?","relevant_chunk_ids":["onboarding-01"],"answerable":true,"reference_answer":"Go to Workspace settings, Members, then Invite member."},
+    {"id":"q12","slice":"unanswerable","query":"Does the Standard plan include phone support on weekends?","relevant_chunk_ids":[],"answerable":false,"reference_answer":"The benchmark corpus does not specify weekend phone support for Standard."}
+  ]
+}

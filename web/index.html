@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A browser-only, bring-your-own-key RAG evidence workbench." />
+    <title>RAG Workbench BYOK</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <p class="eyebrow">BROWSER-ONLY · BYOK</p>
+        <h1>RAG Workbench</h1>
+        <p class="lede">Ask grounded questions over files without creating an account or uploading them to this site.</p>
+      </header>
+
+      <section class="notice" aria-label="Data handling notice">
+        Files stay in this browser. If you choose Generate answer, only the retrieved passages and your question are sent directly to OpenAI using your own key. Your key is held in memory only and is never sent to this website.
+      </section>
+
+      <section class="panel controls" aria-label="Knowledge base controls">
+        <div>
+          <label for="api-key">OpenAI API key <span>(optional)</span></label>
+          <input id="api-key" type="password" autocomplete="off" placeholder="Used only for answer generation" />
+        </div>
+        <div>
+          <label for="files">Documents</label>
+          <input id="files" type="file" accept=".txt,.md,text/plain,text/markdown" multiple />
+          <p class="hint">TXT or Markdown, 10 MB per file, 10 files maximum.</p>
+        </div>
+        <button id="clear" class="secondary" type="button">Clear session</button>
+      </section>
+
+      <section class="stats" aria-label="Index statistics">
+        <div><strong id="document-count">0</strong><span>documents</span></div>
+        <div><strong id="chunk-count">0</strong><span>evidence chunks</span></div>
+        <div><strong>Local BM25</strong><span>retrieval</span></div>
+      </section>
+
+      <section class="panel ask">
+        <label for="question">Ask a question</label>
+        <textarea id="question" rows="3" placeholder="What does the documentation say about…"></textarea>
+        <div class="actions">
+          <button id="search" type="button">Find evidence</button>
+          <button id="generate" type="button" class="secondary">Generate answer with my key</button>
+        </div>
+        <p id="status" class="status" role="status"></p>
+      </section>
+
+      <section id="answer-panel" class="panel hidden" aria-live="polite">
+        <h2>Answer</h2>
+        <div id="answer"></div>
+      </section>
+      <section id="evidence-panel" class="panel hidden">
+        <h2>Retrieved evidence</h2>
+        <div id="evidence"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
