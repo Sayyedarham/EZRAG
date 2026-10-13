@@ -15,10 +15,6 @@ There are now two ways to use it:
 - Grounded generation with visible source evidence and a no-evidence response instead of irrelevant BM25 passages.
 - A GitHub Actions verification workflow and unit tests, plus the existing offline retrieval benchmark.
 
-## Important boundary
-
-This is ready to host as a **single-tenant, internal document workbench**. It is not a multi-tenant SaaS: it has no user authentication, RBAC, durable document storage, shared index, audit trail, or queue-backed ingestion. Do not use it for regulated or confidential data without adding those controls and completing a security review.
-
 ## Run locally
 
 Requires Python 3.11+.
